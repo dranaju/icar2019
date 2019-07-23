@@ -1,0 +1,21 @@
+\section{Theoretical Background}
+
+The goal in deep reinforcement learning is to control an agent attempting to maximize a reward function. 
+The deep Q-network (DQN) algorithm \cite{mnih2013playing} was capable of human level performance on many Atari video games by estimating the actions of an agent.
+However, while DQN could solve problems on complex observation spaces, it only can handle discrete action spaces. 
+It is noticeable that many tasks, on the robotic control, have continuous action spaces. 
+So DQN cannot be applied to continuous domains and it is necessary to use another algorithm that can handle this type of problems.
+
+\subsection{Soft Actor Critic}
+
+The Soft Actor Critic (SAC) algorithm consists of an stochastic actor-critic method that uses approximation functions that can learn continuous action space policies \cite{haarnoja2018soft}. 
+The algorithm makes use of a neural network for the actor network, the value network and other for the critic network. 
+These three networks computes the action prediction for the current state and generates a temporal-difference error signal for each time step.
+
+% The input of the actor network is the current state, and the output is a real value representing an action chosen for a continuous action space. 
+% The output of the critic is simply the estimated Q-value of the current state and the action given by the actor.
+
+Instead of only seeking to maximize the rewards of the system, SAC seeks to also maximize the entropy of the policy.
+The entropy refers to how unpredictable a variable can be. 
+So, if a random variable always takes a single value then it has zero entropy because it is not unpredictable at all. 
+The high entropy in the policy explicitly encourages exploration of the agent because it assigns equal probability to actions that have the same or nearly equal Q-value and also to ensure that it does not collapse into repeatedly selecting a particular action that could exploit some inconsistency in the approximated Q function.

@@ -1,0 +1,18 @@
+\section{Conclusion}
+
+In this paper a SAC network was used in navigation of a mobile robot through continuous control in a virtual and real environments.
+Thus, a deep reinforcement learning network algorithm was able to solve the problem of robot navigation.
+The experiment consisted that the robot could reach a target position in different simulated environments.
+In order to accomplish this objective a reward function was proposed. The SAC network outputs were the linear and angular velocity for the robot.
+%It was proposed as a task that the robot could reach a target position in different simulated environments; therefore, it was created a reward function so that the SAC network could give as results the linear and angular velocity for the robot.
+%sei la tbm KKSDKK 
+All the network structure created was trained on the Gazebo simulation environments before using the network in the real environments.
+
+With the training results obtained on the simulation environments, it was analyzed the performance of the intelligent agent algorithm in the task of avoiding obstacles and getting to the final goal. 
+On the two real environments proposed, the algorithm was able to complete the task of the navigation to get to a target defined on the map.
+% , however, in the last environment it was observed that sometimes even after many training episodes the mobile robot would still collide with some obstacle.
+
+It is possible to conclude that SAC networks are suitable for the development of applications that need a continuous control on the robotics.
+The Deep-RL networks can produce excellent results if the reward system is well-made for the problem that it wants to solve.
+It was proved that intelligent agents can move around in a complex real environments by just training in simulated environments without any previous knowledge of the scenario.
+In a future work, we are planning to compare performance of the SAC and other Deep-RL strategy in the task of navigation of mobile robots.

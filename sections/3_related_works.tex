@@ -1,0 +1,16 @@
+\section{Related Works}
+
+Deep-RL has been previously applied on robotic tasks, among these applications we can refer to the work of \cite{kober2013reinforcement}, \cite{stone2005reinforcement}, \cite{tobin2017domain}.
+Which is a survey of different works of these techniques applied to robotics.
+Mnih et al. \cite{mnih2013playing} utilized a convolution neural network to estimate a value function for future rewards on the Atari games, this strategy was called deep Q-network (DQN) \cite{mnih2013playing}, \cite{hausknecht2015deep}, \cite{van2016deep}.
+The DQN can only be used in a task with a discrete action.
+To extend it to a continuous control, Lillicrap et al. \cite{lillicrap2015continuous} proposed a deep deterministic policy gradients (DDPG).
+That became the basement for the application of Deep-RL in mobile robot navigation as well as the creation of new techniques like the soft actor-critic (SAC) \cite{haarnoja2018soft}.
+Tai et al. \cite{tai2017virtual} created a mapless motion planner for a mobile robot by taking the sparse 10-dimensional range findings and the target position with respect to the mobile robot coordinate frame as inputs and the continuous steering commands as output, but firstly being proposed as discrete steering commands on \cite{tai2016towards}. It was shown that, with the asynchronous Deep-RL method, a mapless motion planner can be trained and complete the task to get to a determined target. 
+
+Zhu et al. \cite{zhu2017target} proposed another model to apply the Deep-RL to the task of driving a mobile robot.
+The model created took the current observation of states and the image of the target as input and generated an action in a 3D environment as the output.
+
+An activity that can be very challenging in robotics is to navigate a vehicle safely and efficiently in pedestrian-rich environments. Chen et al. \cite{chen2017socially} elaborated a Deep-RL model that can quantify what \textit{to} do and \textit{not to} do on the precise mechanism of human  navigation.
+This work develops a time-efficient navigation policy that respects common social norms.
+Creating a method able to control a mobile robot moving at human walking speed in an environment with many pedestrians.
